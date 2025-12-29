@@ -46,7 +46,11 @@
                 </div>
             </div>
 
-            <nav class="nav-links">
+            <button class="hamburger-menu" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
                 <a href="#">Home</a>
                 <a href="#">Motorcycles</a>
                 <a href="#">Three-Wheelers</a>
@@ -199,6 +203,14 @@
         </div>
     </footer>
 
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
