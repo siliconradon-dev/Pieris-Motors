@@ -278,6 +278,72 @@ img {
     color: var(--dpmc-dark-blue);
 }
 
+/* Product Category Grid (Floating Icon) */
+.category-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 30px; /* Larger vertical gap for floating icons */
+    margin-top: 40px; /* Space for top row overlap */
+}
+
+.cat-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    position: relative;
+    padding: 60px 20px 30px 20px; /* Top padding clears the icon */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 30px; /* Ensure space for the icon popping out */
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--dpmc-blue);
+}
+
+.cat-icon-wrapper {
+    position: absolute;
+    top: -40px; /* Half of height (80px) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    z-index: 2;
+}
+
+.cat-icon-wrapper i {
+    font-size: 35px;
+    color: var(--dpmc-dark-blue);
+}
+
+.cat-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cat-desc {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* Footer */
 footer {
     background-color: #222;
@@ -346,7 +412,7 @@ footer {
 
 /* Tablet (MAX 992px -> 2 Columns) */
 @media (max-width: 992px) {
-    .services-grid {
+    .services-grid, .category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -415,7 +481,7 @@ footer {
     }
 
     /* Column Stack */
-    .services-grid {
+    .services-grid, .category-grid {
         grid-template-columns: 1fr; /* Vertical Stack */
     }
     
