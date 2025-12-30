@@ -283,8 +283,13 @@ img {
 }
 
 /* Welcome Section */
+/* Welcome Section */
 .welcome-section {
-    background-color: #fff;
+    background-image: url('../img/about_bg_pattern.png');
+    background-color: #f8f9fa; /* Fallback */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
@@ -404,7 +409,8 @@ img {
 /* Product Category Grid (Floating Icon) */
 .category-section {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: #f2f5f8; /* Zebra Striping: Light Blue-Grey */
+    position: relative;
 }
 
 .category-grid {
@@ -412,6 +418,130 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 30px; /* Larger vertical gap for floating icons */
     margin-top: 40px; /* Space for top row overlap */
+}
+
+/* ... (Existing cat-card styles remain but we ensure they pop against the grey bg) ... */
+
+/* Info Banner / Call to Action Parallax */
+.info-banner {
+    position: relative;
+    background-image: url('../img/hero_bike_dominar.png'); /* Using existing road image */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Dark Overlay for CTA */
+.info-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Strong dark overlay */
+    z-index: -1;
+}
+
+.info-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Content above overlay */
+}
+
+.info-text h3 {
+    margin: 0 0 10px 0;
+    color: #fff; /* White text for contrast */
+    font-size: 2rem;
+}
+
+.info-text p {
+    color: #ddd !important; /* Lighter grey for subtitle */
+}
+
+/* Testimonials Section */
+.testimonial-section {
+    background-color: #fff;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.customer-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border: 3px solid var(--dpmc-blue);
+}
+
+.stars {
+    color: #ffc107; /* Gold color */
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.customer-name {
+    font-weight: 700;
+    color: var(--dpmc-dark-blue);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.customer-role {
+    font-size: 0.8rem;
+    color: #999;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive for Testimonials */
+@media (max-width: 992px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cat-card {
