@@ -344,40 +344,91 @@ img {
 
 .service-card {
     background: #fff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border: none; /* Removed border for cleaner look */
+    border-radius: 12px; /* More modern radius */
     overflow: hidden;
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: all 0.4s ease; /* Smoother transition */
     display: flex;
     flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Softer initial shadow */
+    position: relative;
+    top: 0;
 }
 
 .service-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Deep shadow on lift */
+    transform: translateY(-10px);
 }
 
 .card-header {
-    background: var(--dpmc-dark-blue);
-    padding: 20px;
+    background: linear-gradient(135deg, var(--dpmc-dark-blue) 0%, var(--dpmc-blue) 100%); /* Gradient background */
+    padding: 30px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine effect on header */
+.card-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.service-card:hover .card-header::after {
+    left: 100%;
+    transition: 0.5s;
 }
 
 .card-header i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover .card-header i {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .card-body {
     padding: 30px;
     text-align: center;
     flex-grow: 1;
+    background: #fff;
 }
 
 .card-body h3 {
     margin-top: 0;
     color: var(--dpmc-dark-blue);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.card-body h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--dpmc-blue);
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+.service-card:hover .card-body h3::after {
+    width: 80px;
 }
 
 .card-body p {

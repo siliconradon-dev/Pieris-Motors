@@ -17,45 +17,8 @@
 
 <body>
 
-    <!-- Top Contact Bar -->
-    <div class="top-bar" data-aos="fade-down" data-aos-duration="800">
-        <div class="container top-bar-flex">
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i> No 304 Main street, Kegalle 71000
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i> pierismotots1987@gmail.com
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Header -->
-    <header class="main-header" data-aos="fade-down" data-aos-duration="1000">
-        <div class="container navbar">
-            <div class="logo-area">
-                <!-- Main Pieris Motors Logo -->
-                <a href="index.html" style="display: block;">
-                    <img src="assets/img/logo/pieris_logo.png" alt="Pieris Motors Kegalle"
-                        style="height: 70px; width: auto;">
-                </a>
-            </div>
-
-            <button class="hamburger-menu" id="navToggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="#">Motorcycles</a>
-                <a href="#">Three-Wheelers</a>
-                <a href="services.html" style="color: var(--dpmc-blue);">Services</a>
-                <a href="#">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Page Header Hero -->
     <section class="page-header">
@@ -69,68 +32,117 @@
     <!-- Services List Section -->
     <section class="section-padding">
         <div class="container">
-            <div class="services-list-grid">
+            <div class="services-grid">
+                <!-- Unit 1: Spare Parts -->
+                <a href="business-spare-parts.html" class="service-card-link"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100" style="height: 100%;">
+                        <div class="card-header">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>Motorcycle & Three-wheeler Spare Parts</h3>
+                            <p>Authorized Spare Parts Dealer for David Pieris Motor Company. We stock Genuine Bajaj
+                                Spare Parts, Engine Oils, Batteries, Cables, Nuts & Bolts, and Body Parts.</p>
+                            <p style="margin-top: auto; font-weight: bold; color: var(--dpmc-blue); font-size: 1.1rem;">
+                                <i class="fas fa-phone-alt"></i> 035 222 31 95
+                            </p>
+                        </div>
+                    </div>
+                </a>
 
-                <!-- Vehicle Sales -->
-                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-box">
-                        <i class="fas fa-shopping-cart"></i>
+                <!-- Unit 2: Workshop -->
+                <a href="business-workshops.html" class="service-card-link"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200" style="height: 100%;">
+                        <div class="card-header">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>Professional Workshops & Service</h3>
+                            <div style="text-align: left; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>Kegalle Branch:</strong> General repairs for all
+                                    motorcycles/three-wheelers, Lathe & Milling works. <br><span
+                                        style="color: var(--dpmc-blue); font-weight: bold;">Hotline: 070 235 50
+                                        50</span></p>
+                                <p style="margin-bottom: 0;"><strong>Paragammana Branch:</strong> Authorized DPMC
+                                    Service Dealer. Specializing in Three-wheeler repairs, Service, and
+                                    Tinkering/Painting. <br><span
+                                        style="color: var(--dpmc-blue); font-weight: bold;">Hotline: 071 55 300
+                                        95</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Vehicle Sales</h3>
-                        <p>Authorized dealer for the complete range of Bajaj Motorcycles, Three-wheelers, and QUTE. We
-                            provide the latest models with full warranty support.</p>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Genuine Spare Parts -->
-                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box">
-                        <i class="fas fa-cogs"></i>
+                <!-- Unit 3: New Vehicle Sales -->
+                <a href="business-vehicle-sales.html" class="service-card-link"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300" style="height: 100%;">
+                        <div class="card-header">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>Brand New Vehicle Sales</h3>
+                            <p>Authorized Sales Dealer for Bajaj Motorcycles. We also have a separate unit for Brand New
+                                Three-wheeler sales.</p>
+                            <p style="margin-top: auto; font-weight: bold; color: var(--dpmc-blue); font-size: 1.1rem;">
+                                <i class="fas fa-phone-alt"></i> 070 533 30 30
+                            </p>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Genuine Spare Parts</h3>
-                        <p>We stock 100% genuine Bajaj spare parts for all models. Ensure the longevity and performance
-                            of your vehicle with authentic components.</p>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Vehicle Exchange -->
-                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-box">
-                        <i class="fas fa-exchange-alt"></i>
+                <!-- Unit 4: Registered Vehicle Sales -->
+                <a href="business-registered-sales.html" class="service-card-link"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400" style="height: 100%;">
+                        <div class="card-header">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>Registered Motorcycle & Three-wheeler Sales</h3>
+                            <p>We Buy, Sell, and Exchange all kinds of registered (used) Motorcycles, Scooters, and
+                                Three-wheelers.</p>
+                            <p style="margin-top: auto; font-weight: bold; color: var(--dpmc-blue); font-size: 1.1rem;">
+                                <i class="fas fa-phone-alt"></i> 070 533 30 30
+                            </p>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Vehicle Exchange</h3>
-                        <p>Trade-in your old vehicle for a brand new Bajaj with our hassle-free exchange facility. Best
-                            valuation guaranteed.</p>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Leasing & Finance -->
-                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon-box">
-                        <i class="fas fa-file-invoice-dollar"></i>
+                <!-- Unit 5: Helmet Shop -->
+                <a href="business-helmet-shop.html" class="service-card-link"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500" style="height: 100%;">
+                        <div class="card-header">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>The Helmet Shop</h3>
+                            <p>Full face & open face helmets, sunglasses, rain coats/kits, jackets, seat covers, and
+                                modification items. Helmet parts and repairs are also available.</p>
+                            <p style="margin-top: auto; font-weight: bold; color: var(--dpmc-blue); font-size: 1.1rem;">
+                                <i class="fas fa-phone-alt"></i> 070 600 36 69
+                            </p>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Leasing & Finance</h3>
-                        <p>Support with arranging leasing and finance facilities for your purchase. We work with leading
-                            financial institutions to get you the best rates.</p>
-                    </div>
-                </div>
+                </a>
 
-                <!-- After-Sales Support -->
-                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon-box">
-                        <i class="fas fa-tools"></i>
+                <!-- Unit 6: Education (Optional) -->
+                <a href="business-education.html" class="service-card-link"
+                    style="text-decoration: none; color: inherit; display: block;">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600" style="height: 100%;">
+                        <div class="card-header" style="background: #444;">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>First Class Education Center</h3>
+                            <p>Providing quality tuition and educational services in Kegalle.</p>
+                            <!-- Keeping it subtle with no contact number as it wasn't provided -->
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>After-Sales Support</h3>
-                        <p>Reliable warranty services and technical advice. Our expert team is here to assist you with
-                            any inquiries regarding your Bajaj vehicle.</p>
-                    </div>
-                </div>
-
+                </a>
             </div>
         </div>
     </section>
@@ -144,74 +156,17 @@
                     <p style="margin:0; color: #555;">Contact our support team for any service related inquiries.</p>
                 </div>
                 <div data-aos="fade-left">
-                    <a href="#" class="btn-primary" style="background: var(--dpmc-dark-blue);">Contact Us</a>
+                    <a href="contact.html" class="btn-primary" style="background: var(--dpmc-dark-blue);">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-col" style="flex: 2;">
-                    <h4>Pieris Motors Kegalle</h4>
-                    <p style="color: #aaa; line-height: 1.6; margin-bottom: 20px;">
-                        We are an authorized sales dealer for David Pieris Motor Company, dedicated to serving the
-                        Kegalle area with genuine Bajaj vehicles and exceptional customer service.
-                    </p>
-                    <div style="font-weight: 700; color: #fff; font-size: 1.5rem;">BAJAJ</div>
-                </div>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Motorcycles</a></li>
-                        <li><a href="#">Three-Wheelers</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-list">
-                        <li>
-                            <i class="fas fa-map-marker-alt" style="margin-top: 5px;"></i>
-                            <span>No 304 Main street, Kegalle 71000</span>
-                        </li>
-                        <li style="flex-direction: column; align-items: flex-start; gap: 5px;">
-                            <div style="display: flex; align-items: center; gap: 15px;">
-                                <i class="fas fa-phone-alt"></i> <span>Sales & WhatsApp:</span>
-                            </div>
-                            <span class="big-phone" style="display: block; margin-top: 5px; margin-left: 30px;">070 533
-                                3030</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>pierismotots1987@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <div class="container">
-                &copy; All Rights Reserved | Pieris Motors Kegalle | Designed & Developed by Silicon Radon Networks
-                (Pvt) Ltd.
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- Mobile Navigation Script -->
-    <script>
-        document.getElementById('navToggle').addEventListener('click', function () {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-    </script>
+    <!-- Components Loader -->
+    <script src="assets/js/components-loader.js"></script>
 
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
