@@ -368,6 +368,7 @@ img {
     box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Deep shadow on lift */
     transform: translateY(-10px);
     border-color: var(--dpmc-blue); /* Blue border on hover */
+    cursor: pointer;
 }
 
 .branch-card {
@@ -631,6 +632,7 @@ img {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border-color: var(--dpmc-blue);
+    cursor: pointer;
 }
 
 .cat-icon-wrapper {
@@ -752,6 +754,7 @@ footer {
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 .product-img {
@@ -1103,4 +1106,88 @@ footer {
     .footer-main {
         grid-template-columns: 1fr;
     }
+}
+
+/* Navbar Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    /* Inherit existing nav link styles */
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown:hover .dropbtn, .dropdown .dropbtn:hover {
+    color: var(--dpmc-blue);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1001; /* Above sticky header */
+    border-radius: 8px;
+    padding: 10px 0;
+    top: 100%; /* Position below the button */
+    left: 0;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    text-transform: capitalize; /* Cleaner look for sub-items */
+    font-weight: 400;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: var(--dpmc-blue);
+    padding-left: 25px; /* Slight movement effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Global Hover Animations for Legacy Cards */
+.single__product, 
+.single_blog_post,
+.single_product_list .single__product {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 8px; /* Soften corners */
+    background: #fff; /* Ensure bg is white for shadow to look right */
+}
+
+.single__product:hover, 
+.single_blog_post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
 }
