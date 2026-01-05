@@ -3,9 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('components/header.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
+            const placeholder = document.getElementById('header-placeholder');
+            if (placeholder) {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
 
-            // Initialize Nav Toggle after header load
+                // insert all children before the placeholder
+                while (tempDiv.firstChild) {
+                    placeholder.parentNode.insertBefore(tempDiv.firstChild, placeholder);
+                }
+
+                // remove the placeholder
+                placeholder.remove();
+            }
+
+            // Re-select elements now that they are in the DOM
             const navToggle = document.getElementById('navToggle');
             const navLinks = document.getElementById('navLinks');
 
@@ -17,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Highlight Active Link
             const currentPath = window.location.pathname.split("/").pop();
-            const links = navLinks.getElementsByTagName('a');
+            const links = navLinks ? navLinks.getElementsByTagName('a') : [];
 
             for (let link of links) {
                 const href = link.getAttribute('href');
@@ -32,7 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('components/footer.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
+            const placeholder = document.getElementById('footer-placeholder');
+            if (placeholder) {
+                placeholder.outerHTML = data;
+            }
         })
         .catch(error => console.error('Error loading footer:', error));
 });

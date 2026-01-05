@@ -16,7 +16,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-color: #fff;
+    background-color: #f0f2f5;
+    background-image: radial-gradient(#b0c4de 1.5px, transparent 1.5px), radial-gradient(#b0c4de 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    background-attachment: fixed;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
@@ -60,8 +64,9 @@ img {
 
 /* Navbar */
 .main-header {
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -342,22 +347,37 @@ img {
     gap: 30px;
 }
 
-.service-card {
-    background: #fff;
-    border: none; /* Removed border for cleaner look */
-    border-radius: 12px; /* More modern radius */
+/* GLASSMORPHISM CARD STYLES */
+.service-card, .branch-card, .info-card {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    backdrop-filter: blur(12px); /* Blur effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6); /* White thin border */
+    border-radius: 16px; /* Modern rounded corners */
     overflow: hidden;
-    transition: all 0.4s ease; /* Smoother transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Softer initial shadow */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07); /* Soft shadow */
     position: relative;
     top: 0;
+    height: 100%; /* Ensure equal height */
 }
 
-.service-card:hover {
+.service-card:hover, .branch-card:hover, .info-card:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Deep shadow on lift */
     transform: translateY(-10px);
+    border-color: var(--dpmc-blue); /* Blue border on hover */
+}
+
+.branch-card {
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-card {
+    padding: 30px;
 }
 
 .card-header {
@@ -381,7 +401,7 @@ img {
     transition: 0.5s;
 }
 
-.service-card:hover .card-header::after {
+.service-card:hover .card-header::after, .branch-card:hover .card-header::after {
     left: 100%;
     transition: 0.5s;
 }
@@ -401,10 +421,11 @@ img {
     padding: 30px;
     text-align: center;
     flex-grow: 1;
-    background: #fff;
+    background: transparent; /* Transparent to show glass effect (or keep white if needed for contrast, but glass is requested) */
 }
 
-.card-body h3 {
+/* Ensure text legibility on glass */
+.card-body h3, .branch-card h3 {
     margin-top: 0;
     color: var(--dpmc-dark-blue);
     margin-bottom: 20px;
@@ -414,7 +435,7 @@ img {
     padding-bottom: 15px;
 }
 
-.card-body h3::after {
+.card-body h3::after, .branch-card h3::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -427,12 +448,12 @@ img {
     transition: width 0.3s;
 }
 
-.service-card:hover .card-body h3::after {
+.service-card:hover .card-body h3::after, .branch-card:hover h3::after {
     width: 80px;
 }
 
-.card-body p {
-    color: #666;
+.card-body p, .branch-card p {
+    color: #555;
     margin-bottom: 20px;
 }
 

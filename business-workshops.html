@@ -11,8 +11,26 @@
 
     <!-- Custom DPMC Style -->
     <link rel="stylesheet" href="assets/css/dpmc_style.css">
+    <link rel="stylesheet" href="assets/css/product_cards.css">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Specific Grid for Workshop Branches */
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+            /* Increased gap for clear separation */
+            margin-top: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .workshop-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -37,137 +55,191 @@
                 <div class="divider"></div>
             </div>
 
-            <div class="row" style="display: flex; gap: 40px; flex-wrap: wrap; margin-top: 40px;">
+            <!-- Workshop Branches Grid -->
+            <div class="workshop-grid">
 
                 <!-- Kegalle Branch -->
-                <div class="col-lg-6" style="flex: 1; min-width: 300px;">
-                    <div
-                        style="background: #fff; border: 1px solid #ddd; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
-                        <h3
-                            style="color: var(--dpmc-dark-blue); border-bottom: 2px solid var(--dpmc-blue); padding-bottom: 10px; display: inline-block;">
-                            Kegalle Branch</h3>
-                        <p style="margin-top: 20px; line-height: 1.6; color: #555;">
-                            Our central hub for general repairs. We handle all types of mechanical work for motorcycles
-                            and three-wheelers.
-                        </p>
-                        <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> General
-                                Repairs</li>
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> Lathe &
-                                Milling Works</li>
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> Engine
-                                Tune-ups</li>
-                        </ul>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Kegalle Branch</h3>
+                    <p style="margin-top: 20px; line-height: 1.6; color: #555;">
+                        Our central hub for general repairs. We handle all types of mechanical work for motorcycles
+                        and three-wheelers.
+                    </p>
+                    <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> General
+                            Repairs</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> Lathe &
+                            Milling Works</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> Engine
+                            Tune-ups</li>
+                    </ul>
 
-                        <div style="margin-top: auto; padding: 15px; background: #eef7ff; border-radius: 5px;">
-                            <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Hotline:</p>
-                            <p style="margin: 5px 0 0 0; font-size: 1.4rem; color: var(--dpmc-blue); font-weight: 700;">
-                                070 235 50 50</p>
-                        </div>
+                    <div style="margin-top: auto; padding: 15px; background: #eef7ff; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Hotline:</p>
+                        <p style="margin: 5px 0 0 0; font-size: 1.4rem; color: var(--dpmc-blue); font-weight: 700;">
+                            070 235 50 50</p>
                     </div>
                 </div>
 
                 <!-- Paragammana Branch -->
-                <div class="col-lg-6" style="flex: 1; min-width: 300px;">
-                    <div
-                        style="background: #fff; border: 1px solid #ddd; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
-                        <h3
-                            style="color: var(--dpmc-dark-blue); border-bottom: 2px solid var(--dpmc-blue); padding-bottom: 10px; display: inline-block;">
-                            Paragammana Branch</h3>
-                        <p style="margin-top: 20px; line-height: 1.6; color: #555;">
-                            An Authorized DPMC Service Dealer facility dedicated to specialized care for your vehicle.
-                        </p>
-                        <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> Full
-                                Service & Lubrication</li>
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
-                                Three-wheeler Special Repairs</li>
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-paint-roller"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
-                                Tinkering & Painting</li>
-                        </ul>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Paragammana Branch</h3>
+                    <p style="margin-top: 20px; line-height: 1.6; color: #555;">
+                        An Authorized DPMC Service Dealer facility dedicated to specialized care for your vehicle.
+                    </p>
+                    <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> Full
+                            Service & Lubrication</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
+                            Three-wheeler Special Repairs</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-paint-roller"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
+                            Tinkering & Painting</li>
+                    </ul>
 
-                        <div style="margin-top: auto; padding: 15px; background: #eef7ff; border-radius: 5px;">
-                            <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Hotline:</p>
-                            <p style="margin: 5px 0 0 0; font-size: 1.4rem; color: var(--dpmc-blue); font-weight: 700;">
-                                071 55 300 95</p>
-                        </div>
+                    <div style="margin-top: auto; padding: 15px; background: #eef7ff; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Hotline:</p>
+                        <p style="margin: 5px 0 0 0; font-size: 1.4rem; color: var(--dpmc-blue); font-weight: 700;">
+                            071 55 300 95</p>
                     </div>
                 </div>
 
                 <!-- Nelumdeniya Branch -->
-                <div class="col-lg-6" style="flex: 1; min-width: 300px;">
-                    <div
-                        style="background: #fff; border: 1px solid #ddd; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
-                        <h3
-                            style="color: var(--dpmc-dark-blue); border-bottom: 2px solid var(--dpmc-blue); padding-bottom: 10px; display: inline-block;">
-                            Nelumdeniya Branch</h3>
-                        <p style="margin-top: 20px; line-height: 1.6; color: #555;">
-                            Conveniently located service point for customers in Nelumdeniya area, maintaining Pieris
-                            Motors standards.
-                        </p>
-                        <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> General
-                                Repairs</li>
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-oil-can"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
-                                Oil Change & Service</li>
-                        </ul>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Nelumdeniya Branch</h3>
+                    <p style="margin-top: 20px; line-height: 1.6; color: #555;">
+                        Conveniently located service point for customers in Nelumdeniya area, maintaining Pieris
+                        Motors standards.
+                    </p>
+                    <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> General
+                            Repairs</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-oil-can"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
+                            Oil Change & Service</li>
+                    </ul>
 
-                        <div style="margin-top: auto; padding: 15px; background: #f8f9fa; border-radius: 5px;">
-                            <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Contact:</p>
-                            <p style="margin: 5px 0 0 0; font-size: 1.2rem; color: var(--dpmc-blue); font-weight: 700;">
-                                070 533 30 30</p>
-                        </div>
+                    <div style="margin-top: auto; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Contact:</p>
+                        <p style="margin: 5px 0 0 0; font-size: 1.2rem; color: var(--dpmc-blue); font-weight: 700;">
+                            070 533 30 30</p>
                     </div>
                 </div>
 
                 <!-- Ranwala Branch -->
-                <div class="col-lg-6" style="flex: 1; min-width: 300px;">
-                    <div
-                        style="background: #fff; border: 1px solid #ddd; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
-                        <h3
-                            style="color: var(--dpmc-dark-blue); border-bottom: 2px solid var(--dpmc-blue); padding-bottom: 10px; display: inline-block;">
-                            Ranwala Branch</h3>
-                        <p style="margin-top: 20px; line-height: 1.6; color: #555;">
-                            Reliable service center providing essential maintenance and repair works for vehicle owners
-                            in Ranwala.
-                        </p>
-                        <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-wrench"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> General
-                                Repairs</li>
-                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
-                                    class="fas fa-check-circle"
-                                    style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
-                                Routine Maintenance</li>
-                        </ul>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Ranwala Branch</h3>
+                    <p style="margin-top: 20px; line-height: 1.6; color: #555;">
+                        Reliable service center providing essential maintenance and repair works for vehicle owners
+                        in Ranwala.
+                    </p>
+                    <h4 style="font-size: 1.1rem; color: #333; margin-top: 20px;">Services Available:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-wrench"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i> General
+                            Repairs</li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                class="fas fa-check-circle"
+                                style="color: var(--dpmc-blue); position: absolute; left: 0; top: 5px;"></i>
+                            Routine Maintenance</li>
+                    </ul>
 
-                        <div style="margin-top: auto; padding: 15px; background: #f8f9fa; border-radius: 5px;">
-                            <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Contact:</p>
-                            <p style="margin: 5px 0 0 0; font-size: 1.2rem; color: var(--dpmc-blue); font-weight: 700;">
-                                070 533 30 30</p>
-                        </div>
+                    <div style="margin-top: auto; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: var(--dpmc-dark-blue);">Contact:</p>
+                        <p style="margin: 5px 0 0 0; font-size: 1.2rem; color: var(--dpmc-blue); font-weight: 700;">
+                            070 533 30 30</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & Featured Works Section -->
+    <section class="section-padding" style="background-color: transparent;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Workshop Facilities</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Featured Facilities Grid -->
+            <div class="products-grid" style="margin-bottom: 60px;">
+                <!-- Facility 1 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="assets/img/icon/parts.png" alt="Tools" style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Advanced Tools</h3>
+                        <p class="product-cat">Precision Repair</p>
+                    </div>
+                </div>
+                <!-- Facility 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="assets/img/icon/repairs.png" alt="Paint Booth"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Paint Booth</h3>
+                        <p class="product-cat">Tinkering & Painting</p>
+                    </div>
+                </div>
+                <!-- Facility 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-img">
+                        <img src="assets/img/hero_oil.png" alt="Service Bays"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Service Bays</h3>
+                        <p class="product-cat">Quick Service</p>
+                    </div>
+                </div>
+                <!-- Facility 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-img">
+                        <img src="assets/img/hero_bike_ns200.png" alt="Engine Room"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Engine Room</h3>
+                        <p class="product-cat">Overhauling</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in">
+                    <img src="assets/img/mechanic_workshop.png" alt="Workshop 1"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/img/hero_motorcycle.png" alt="Workshop 2"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/hero_scooter.png" alt="Workshop 3"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </div>
@@ -180,7 +252,10 @@
     <script src="assets/js/components-loader.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
     </script>
 </body>
 

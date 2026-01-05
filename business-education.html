@@ -11,6 +11,7 @@
 
     <!-- Custom DPMC Style -->
     <link rel="stylesheet" href="assets/css/dpmc_style.css">
+    <link rel="stylesheet" href="assets/css/product_cards.css">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -47,11 +48,82 @@
                 </div>
 
                 <div class="col-lg-4" style="flex: 1; min-width: 300px;">
-                    <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <div class="info-card" data-aos="fade-left">
                         <h3 style="margin-top: 0; color: var(--dpmc-dark-blue);">Visit Us</h3>
                         <p>Located convenient in Kegalle town.</p>
                         <p style="font-weight: 600;">For more details, please visit our center.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & Featured Programs Section -->
+    <section class="section-padding" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Educational Programs</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Featured Programs Grid -->
+            <div class="products-grid" style="margin-bottom: 60px;">
+                <!-- Program 1 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="assets/img/icon/parts.png" alt="Mathematics"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mathematics</h3>
+                        <p class="product-cat">Grade 6-11</p>
+                    </div>
+                </div>
+                <!-- Program 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="assets/img/icon/parts.png" alt="Science" style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Science</h3>
+                        <p class="product-cat">Grade 6-11</p>
+                    </div>
+                </div>
+                <!-- Program 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-img">
+                        <img src="assets/img/icon/parts.png" alt="English" style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>English</h3>
+                        <p class="product-cat">Spoken & Written</p>
+                    </div>
+                </div>
+                <!-- Program 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-img">
+                        <img src="assets/img/icon/parts.png" alt="Commerce" style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Commerce</h3>
+                        <p class="product-cat">A/L Stream</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in">
+                    <img src="assets/img/classroom_tuition.png" alt="Classroom"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/img/services_hero.png" alt="Study Area"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/hero_motorcycle.png" alt="Event"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </div>

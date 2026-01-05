@@ -11,6 +11,7 @@
 
     <!-- Custom DPMC Style -->
     <link rel="stylesheet" href="assets/css/dpmc_style.css">
+    <link rel="stylesheet" href="assets/css/product_cards.css">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -67,7 +68,7 @@
                 </div>
 
                 <div class="col-lg-4" style="flex: 1; min-width: 300px;">
-                    <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <div class="info-card" data-aos="fade-left">
                         <h3 style="margin-top: 0; color: var(--dpmc-dark-blue);">Sales Inquiry</h3>
                         <p style="margin-bottom: 5px; font-weight: 600;">Main Sales Hotline:</p>
                         <p style="font-size: 1.5rem; color: var(--dpmc-blue); font-weight: 700; margin-top: 0;">070 533
@@ -79,6 +80,80 @@
                         <a href="contact.html" class="btn-primary"
                             style="display: block; text-align: center; margin-top: 20px;">Get Directions</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & Featured Vehicles Section -->
+    <section class="section-padding" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>New Arrivals & Top Models</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Featured Vehicles Grid -->
+            <div class="products-grid" style="margin-bottom: 60px;">
+                <!-- Vehicle 1 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="assets/img/hero_bike_dominar.png" alt="Dominar 400"
+                            style="object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Dominar 400</h3>
+                        <p class="product-cat">Sports Tourer</p>
+                    </div>
+                </div>
+                <!-- Vehicle 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="assets/img/hero_motorcycle.png" alt="Pulsar NS200"
+                            style="object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pulsar NS200</h3>
+                        <p class="product-cat">Naked Sport</p>
+                    </div>
+                </div>
+                <!-- Vehicle 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-img">
+                        <img src="assets/img/hero_threewheeler_red.png" alt="Bajaj RE 4S"
+                            style="object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bajaj RE 4S</h3>
+                        <p class="product-cat">Three-Wheeler</p>
+                    </div>
+                </div>
+                <!-- Vehicle 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-img">
+                        <img src="assets/img/icon/motorcycle.png" alt="CT 100"
+                            style="object-fit: contain; padding: 10px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>CT 100</h3>
+                        <p class="product-cat">Commuter</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in">
+                    <img src="assets/img/motorcycle_showroom.png" alt="Showroom Interior"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/img/services_hero.png" alt="Happy Customer"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/hero_motorcycle.png" alt="Vehicle Handover"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </div>

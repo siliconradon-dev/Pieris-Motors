@@ -11,6 +11,7 @@
 
     <!-- Custom DPMC Style -->
     <link rel="stylesheet" href="assets/css/dpmc_style.css">
+    <link rel="stylesheet" href="assets/css/product_cards.css">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -70,7 +71,7 @@
                 </div>
 
                 <div class="col-lg-4" style="flex: 1; min-width: 300px;">
-                    <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <div class="info-card" data-aos="fade-left">
                         <h3 style="margin-top: 0; color: var(--dpmc-dark-blue);">Direct Contact</h3>
                         <p style="margin-bottom: 5px; font-weight: 600;">Shop Line:</p>
                         <p style="font-size: 1.5rem; color: var(--dpmc-blue); font-weight: 700; margin-top: 0;">070 600
@@ -84,6 +85,80 @@
                                 helmet repairs.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & Top Selling Gear Section -->
+    <section class="section-padding" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Top Selling Gear</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Top Selling Items Grid -->
+            <div class="products-grid" style="margin-bottom: 60px;">
+                <!-- Gear 1 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <img src="assets/img/icon/parts.png" alt="Full Face Helmet"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pro Rider X</h3>
+                        <p class="product-cat">Full Face Helmet</p>
+                    </div>
+                </div>
+                <!-- Gear 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="assets/img/icon/tyre.png" alt="Riding Gloves"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Grip Master</h3>
+                        <p class="product-cat">Riding Gloves</p>
+                    </div>
+                </div>
+                <!-- Gear 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-img">
+                        <img src="assets/img/icon/repairs.png" alt="Rain Coat"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Storm Shield</h3>
+                        <p class="product-cat">Rain Coat</p>
+                    </div>
+                </div>
+                <!-- Gear 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-img">
+                        <img src="assets/img/icon/oil.png" alt="Visor Cleaner"
+                            style="object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear View</h3>
+                        <p class="product-cat">Visor Cleaner</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in">
+                    <img src="assets/img/helmet_gear_display.png" alt="Helmet Display"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/img/hero_motorcycle.png" alt="Rider Gear"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-4" style="flex: 1; min-width: 300px;" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/services_hero.png" alt="Shop Interior"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </div>
